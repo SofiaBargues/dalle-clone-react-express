@@ -30,7 +30,7 @@ const Home = () => {
           },
         });
         if (response.ok) {
-          console.log(response);
+          // console.log(response);
           const result = await response.json();
           setAllPosts(result.data.reverse());
         }
