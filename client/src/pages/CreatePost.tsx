@@ -28,6 +28,7 @@ const CreatePost = () => {
         console.log(response);
         if (response.status != 200) {
           console.error("error de servidor");
+          console.log(response.statusText);
         }
         const data = await response.json();
 
