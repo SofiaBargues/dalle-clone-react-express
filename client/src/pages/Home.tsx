@@ -30,8 +30,9 @@ const Home = () => {
           },
         });
         if (response.ok) {
-          // console.log(response);
+          console.log(response);
           const result = await response.json();
+          console.log(result);
           setAllPosts(result.data.reverse());
         }
       } catch (error) {
@@ -40,6 +41,7 @@ const Home = () => {
         setLoading(false);
       }
     };
+
     fetchPosts();
   }, []);
 
