@@ -94,13 +94,12 @@ const CreatePost = () => {
             placeholder="John Doe"
             value={form.name}
             handleChange={handleChange}
-            isSurpriseMe
             handleSurpriseMe={handleSurpriseMe}
           />
           <FormField
             labelName="Prompt"
             type="text"
-            name="promp"
+            name="prompt"
             placeholder="A plush toy robot sitting against a yellow wall"
             value={form.prompt}
             handleChange={handleChange}
