@@ -29,6 +29,7 @@ router.route("/").post(async (req, res) => {
   try {
     const { name, prompt, photo } = req.body;
     const photoUrl = await cloudinary.uploader.upload(photo);
+//aca escribo en la base de datos un nuevo post
 
     const newPost = await Post.create({
       name,
@@ -36,7 +37,7 @@ router.route("/").post(async (req, res) => {
       photo: photoUrl.url,
     });
 
-    res.status(201).json({ succes: true, data: newPost });
+    res.status(201).json({ success: true, data: newPost });
   } catch (error) {
     res.status(500).json({ success: false, message: error });
   }

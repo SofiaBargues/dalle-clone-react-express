@@ -5,6 +5,7 @@ import { FormField, Loader } from "../components";
 import { useNavigate } from "react-router-dom";
 const CreatePost = () => {
   const navigate = useNavigate();
+  // rerender con el nuevo valor de form 
   const [form, setForm] = useState({
     name: "",
     prompt: "",
@@ -68,7 +69,9 @@ const CreatePost = () => {
     }
   };
 
+  //evento
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+   // agarro el nuevo valor del evento y lo seteo a form
     setForm({ ...form, [e.target.name]: e.target.value });
   };
   const handleSurpriseMe = () => {
